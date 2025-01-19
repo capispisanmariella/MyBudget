@@ -39,7 +39,7 @@ describe('StatCardComponent', () => {
     // Assert
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('mat-icon')?.textContent).toContain(testData.icon);
-    expect(compiled.querySelector('h3')?.textContent).toContain('1,000');
+    expect(compiled.querySelector('h3')?.textContent).toContain('₱1,000.00');
     expect(compiled.querySelector('p')?.textContent).toContain(testData.label);
     expect(getComputedStyle(compiled.querySelector('mat-icon') as HTMLElement).color)
     .toBe('rgb(255, 107, 107)');

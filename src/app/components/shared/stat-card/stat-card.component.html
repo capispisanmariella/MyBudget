@@ -1,7 +1,7 @@
 <div class="stat-card">
     <mat-icon [style.color]="color">{{icon}}</mat-icon>
     <div class="stat-content">
-        <h3>{{amount | number}}</h3>
-        <p>{{label}}</p>
+      <h3>{{amount | currency:'PHP':'symbol':'1.2-2'}}</h3>
+      <p>{{label}}</p>
     </div>
-</div>
+  </div>
