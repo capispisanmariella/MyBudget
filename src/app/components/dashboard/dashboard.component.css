@@ -1,0 +1,113 @@
+.dashboard-container {
+  padding: 24px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.recent-transactions {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.transactions-table {
+  width: 100%;
+  min-width: 600px;
+}
+
+.mat-mdc-row:hover {
+  background-color: #f8f9fa;
+}
+
+.mat-mdc-header-cell {
+  font-weight: 500;
+  color: #666;
+}
+
+.mat-mdc-cell {
+  color: #333;
+}
+
+.income {
+  color: #22c55e;
+}
+
+.expense {
+  color: #ef4444;
+}
+
+.view-all-button {
+  background-color: #42B8E6 !important;
+  color: white !important;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.view-all-button:hover {
+  background-color: #3aa6d1 !important;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .recent-transactions {
+    margin: 0 -16px;
+    padding: 16px;
+    border-radius: 0;
+  }
+
+  .table-scroll {
+    max-height: 350px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}

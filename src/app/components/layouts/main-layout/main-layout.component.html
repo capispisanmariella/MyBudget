@@ -1,0 +1,21 @@
+<mat-sidenav-container>
+  <mat-sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="isOpen">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content class="main-content">
+    <div class="page-header">
+      <button mat-icon-button class="menu-button" (click)="toggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button mat-mini-fab class="profile-button" [matMenuTriggerFor]="menu">
+        <img [src]="profileImage" alt="Profile" class="profile-image">
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onLogout()">
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

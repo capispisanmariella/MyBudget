@@ -1,0 +1,79 @@
+.transactions-container {
+    padding: 24px;
+}
+
+.transactions-header {
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+}
+
+.transactions-table {
+  width: 100%;
+  min-width: 600px;
+}
+
+.mat-mdc-header-row {
+  background-color: white;
+}
+
+.mat-mdc-row:hover {
+  background-color: #f8f9fa;
+}
+
+.mat-mdc-header-cell {
+  font-weight: 500;
+  color: #666;
+}
+
+.mat-mdc-cell {
+  color: #333;
+}
+
+.income {
+  color: #22c55e;
+}
+
+.expense {
+  color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .transactions-container {
+    padding: 16px;
+  }
+
+  .transactions-header {
+    margin-bottom: 16px;
+  }
+
+  .table-container {
+    margin: 0 -16px;
+    border-radius: 0;
+  }
+
+  .table-scroll {
+    max-height: calc(100vh - 200px);
+  }
+
+  mat-paginator {
+    margin: 0;
+  }
+}

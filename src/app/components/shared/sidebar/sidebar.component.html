@@ -1,0 +1,16 @@
+<div class="sidebar-container">
+    <div class="logo-container">
+      <img [src]="logoPath" alt="MyBudget Logo" class="logo">
+    </div>
+    
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active" class="nav-item">
+        <mat-icon>grid_view</mat-icon>
+        <span>Dashboard</span>
+      </a>
+      <a mat-list-item routerLink="/transactions" routerLinkActive="active" class="nav-item">
+        <mat-icon>receipt</mat-icon>
+        <span>Transactions</span>
+      </a>
+    </mat-nav-list>
+</div>

@@ -1,0 +1,46 @@
+:host {
+display: block;
+height: 100vh;
+}
+
+mat-sidenav-container {
+height: 100%;
+}
+
+mat-sidenav {
+width: 280px;
+border: none;
+background-color: white;
+box-shadow: 1px 0 10px rgba(0,0,0,0.05);
+}
+
+.main-content {
+background-color: #f8f9fa;
+padding: 24px;
+min-height: calc(100vh - 64px);
+}
+
+.page-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 24px;
+  }
+  
+  .profile-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: white;
+  }
+  
+  .profile-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  .main-content {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }

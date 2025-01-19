@@ -1,0 +1,48 @@
+<div class="dashboard-container">
+  <h1>Dashboard</h1>
+  
+  <div class="stats-grid">
+    <app-stat-card 
+      *ngFor="let stat of stats" 
+      [icon]="stat.icon" 
+      [amount]="stat.amount" 
+      [label]="stat.label"
+      [color]="stat.color">
+    </app-stat-card>
+  </div>
+
+  <app-card title="Recent Transactions">
+    <button actions mat-raised-button class="view-all-button" (click)="viewAllTransactions()">
+      View All
+    </button>
+    
+    <div class="table-scroll">
+      <table mat-table [dataSource]="recentTransactions" class="transactions-table">
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef>Date</th>
+          <td mat-cell *matCellDef="let transaction">{{transaction.date | date:'MMM d, y'}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef>Description</th>
+          <td mat-cell *matCellDef="let transaction">{{transaction.description}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef>Category</th>
+          <td mat-cell *matCellDef="let transaction">{{transaction.category}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef>Amount</th>
+          <td mat-cell *matCellDef="let transaction" [class.income]="transaction.type === 'income'" [class.expense]="transaction.type === 'expense'">
+            {{transaction.type === 'income' ? '+' : '-'}}{{transaction.amount | currency}}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </app-card>
+</div>

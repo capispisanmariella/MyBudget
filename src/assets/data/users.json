@@ -1,0 +1,18 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "email": "admin@mybudget.com",
+        "password": "Admin@123",
+        "name": "Admin User",
+        "role": "admin"
+      },
+      {
+        "id": 2,
+        "email": "user@mybudget.com",
+        "password": "User@123",
+        "name": "Regular User",
+        "role": "user"
+      }
+    ]
+  }
