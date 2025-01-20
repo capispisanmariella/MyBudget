@@ -1,27 +1,82 @@
-# MyBudget
+MyBudget - Personal Finance Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+A simple finance tracking app built with Angular 17 to help you manage your money better.
 
-## Development server
+## Features
+- Dashboard with expense category breakdown
+- Transaction history with sorting and pagination
+- Protected routes with authentication
+- Real-time expense calculations
+- Responsive design
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Prerequisites
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+- Angular CLI (v17.3)
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository:
+- git clone https://github.com/capispisanmariella/MyBudget
+- cd mybudget
 
-## Build
+2. Install packages:
+- npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. Start it up:
+- ng serve --open
+- Open http://localhost:4200 in your browser
 
-## Running unit tests
+4. Open your browser and navigate to `http://localhost:4200`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Testing Protected Routes
+The application uses localStorage for authentication. To test protected routes:
 
-## Running end-to-end tests
+1. Open browser's Developer Tools (F12)
+2. Go to Console tab
+3. Run these commands:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Architecture Decisions
 
-## Further help
+1. **Component Structure**
+   - Standalone components for better tree-shaking
+   - Shared components (StatCard, Card) for reusability
+   - Content projection for flexible layouts
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. **Data Flow**
+   - Route resolvers pre-fetch transaction data
+   - Reactive data updates using Angular's change detection
+   - Centralized transaction service
+
+3. **Styling**
+   - CSS Grid for responsive layouts
+   - Material Design components
+   - Mobile-first approach with media queries
+
+## Known Limitations
+
+1. **Authentication**
+   - Basic localStorage implementation
+   - No session management
+   - No secure token storage
+
+2. **Data Management**
+   - Mock data only
+   - No real-time updates
+   - Limited error handling
+
+## Future Improvements
+
+1. **Security**
+   - Implement proper authentication
+   - Add route guards for specific roles
+   - Secure data storage
+
+2. **Features**
+   - Add transaction filtering
+   - Implement data export
+   - Add data visualization
+   - Support multiple currencies
+
+## Running Tests
+- ng test
